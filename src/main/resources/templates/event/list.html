@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Event Id:</th>
+            <th>Event Name:</th>
+            <th>Event Type:</th>
+        </tr>
+        <tr th:each="event: ${eventList}">
+            <td th:text="${event.id}"></td>
+            <td th:text="${event.name}"></td>
+            <td th:text="${event.type}"></td>
+        </tr>
+    </table>
+</body>
+</html>
