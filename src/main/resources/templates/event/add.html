@@ -6,6 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form th:action="@{/event/add}" th:object="${event}" method="post">
+
+        <!-- Event Date -->
+        <label for="eventDate">Event Date</label>
+        <input type="date" id="eventDate" required th:field="*{eventDate}">
+
+        <!-- Event type -->
+         <label for="event-type">Event Type</label>
+         <select id="event-type" th:field="*{type}">
+            <option required th:each="eventType:${eventTypes}" th:value="${eventType}" th:text="${eventType}"></option>
+         </select>
+
+         <!-- Event Name -->
+        <label for="event-name">Event Name</label>
+         <input type="text" id="event-name" required th:field="*{name}">
+
+         <!-- <button><a href="/event/list"></a>Add Event</button> -->
+          <button type="submit">Add Event</button>
+    </form>
 </body>
 </html>

@@ -6,16 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
+    <table border="1">
         <tr>
             <th>Event Id:</th>
             <th>Event Name:</th>
             <th>Event Type:</th>
+            <th>Event Date</th>
         </tr>
         <tr th:each="event: ${eventList}">
             <td th:text="${event.id}"></td>
             <td th:text="${event.name}"></td>
             <td th:text="${event.type}"></td>
+            <td th:text="${event.eventDate}"></td>
         </tr>
     </table>
 </body>
